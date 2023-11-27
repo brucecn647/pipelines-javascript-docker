@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: brucecnpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: brucecnpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: brucecnpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: brucecnpipelinesjavascriptdocker 
+          image: bruce647containerregistry.azurecr.io/brucecnpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
